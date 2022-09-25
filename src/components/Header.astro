@@ -1,0 +1,18 @@
+---
+import HeaderLink from './HeaderLink.astro';
+---
+
+<header>
+	<a href="/" aria-label="enlace que redirije al inicio ">
+		<img class="w-52" src="/logo.svg" alt="">
+	</a>
+</header>
+<style>
+	img {
+		transition: transform ease .3s;
+	}
+	img:hover {
+		transform: scale(1.1);
+		object-fit: contain;
+	}
+</style>
