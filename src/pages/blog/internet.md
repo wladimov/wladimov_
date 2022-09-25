@@ -10,6 +10,7 @@ tagImage: "/tags/internet.png"
 tagAlt: "web"
 ---
 
+<!--
 # Internet
 
 La red que mantiene conectada al mundo
@@ -28,3 +29,5 @@ La rueda, la electricidad, el foco el teléfono, el iPhone son tecnologías que 
 ## La red e redes
 
 A día de hoy internet es Una amalgama de redes interconectadas por todo el mundo siendo en realidad el sistema global de redes informáticas interconectadas que utiliza varios protocolos para así comunicarse entre redes y dispositivos. Permitiendo
+
+-->
