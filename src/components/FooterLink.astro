@@ -6,7 +6,7 @@ const isActive = href === Astro.url.pathname;
 ---
 
 <a
-	class="inline-block text no-underline active:font-bold text-gray-600 pr-4 hover:text-blue-400"
+	class="inline-block text no-underline active:font-bold text-gray-700 pr-4 hover:text-blue-400"
 	href={href} class:list={[className, { active: isActive }]} {...props}>
 	<slot />
 </a>
