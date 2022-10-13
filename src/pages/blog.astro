@@ -65,13 +65,7 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 						</picture>
 						<div>
 							<h2 class="title-post">{post.frontmatter.title}</h2>
-							<time datetime={post.frontmatter.pubDate}>
-									{new Date(post.frontmatter.pubDate).toLocaleDateString('en-us', {
-										day: 'numeric',
-										year: 'numeric',
-										month: 'long',
-									})}
-							</time>
+							<time class="info" >{post.frontmatter.pubDate}</time>
 						</div>
 					</a>
 					<p> {post.frontmatter.description} </p>

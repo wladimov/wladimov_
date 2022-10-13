@@ -23,8 +23,6 @@ const {
 	content: { title, description, pubDate, updatedDate, heroImage, alt, tag, tagImage, tagAlt, },
 } = Astro.props;
 
-const { minutesRead } = Astro.props.frontmatter;
-
 ---
 
 <html lang="en">
@@ -75,7 +73,6 @@ const { minutesRead } = Astro.props.frontmatter;
 						</time>
 					}
 					{updatedDate && <div>Last updated on <time>{updatedDate}</time></div>}
-					<span class="time">&nbsp; {minutesRead} </span>
 				</div>
 				<hr/>
 				<slot />
