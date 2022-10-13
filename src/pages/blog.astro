@@ -59,16 +59,20 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 		<main>
 			<section>
 				{posts.map((post) =>(
-					<a class="content-post" href={post.url}>
-						<picture>
-							<img src={post.frontmatter.heroImage} alt={post.frontmatter.alt} />
-						</picture>
-						<div>
-							<h2 class="title-post">{post.frontmatter.title}</h2>
-							<time class="info" >{post.frontmatter.pubDate}</time>
-						</div>
-					</a>
-					<p> {post.frontmatter.description} </p>
+					<div>
+						{!post.frontmatter.draft &&
+							<a class="content-post" href={post.url}>
+								<picture>
+									<img src={post.frontmatter.heroImage} alt={post.frontmatter.alt} />
+								</picture>
+								<div>
+									<h2 class="title-post">{post.frontmatter.title}</h2>
+									<time class="info" >{post.frontmatter.pubDate}</time>
+								</div>
+							</a>
+							<p> {post.frontmatter.description} </p>
+						}
+					</div>
 				))}
 			</section>
 		</main>
