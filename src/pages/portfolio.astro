@@ -4,6 +4,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 import Twitter from '../components/logos/Twitter.astro';
+import Porfolio from '../components/Porfolio.astro';
 
 const url = 'https://twitter.com/share?url=';
 // Use Astro.glob() to fetch all posts, and then sort them by date.
@@ -22,27 +23,8 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 		<Header />
 		<main>
 			<h2 class="font-bold my-8">Portfolio</h2>
-			<h3 class="text-base my-8">Conoce mi portfolio. <br> Estos son algunos de los proyectos en los que he participado como freelance.</h3>
-			<section>
-                <article>
-					<a href="#">
-						<img src="/social.png" alt="">
-					</a>
-					<a href="#">
-						<h4 id="name"></h4>
-					</a>
-                    <p id="description">
-						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam repellendus error corporis ut fugit accusamus debitis earum neque minima consequuntur rerum illum, sint commodi minus sed aspernatur id magnam explicabo?
-					</p>
-					<a href="https://www.wladimov.com/">Tecnologias con con las que construi wladimov.com</a>
-					<picture class="flex gap-4">
-						<img class="w-6 h-6" src="/tags/tailwind.png" alt="">
-						<img class="w-6 h-6" src="/tags/javascript.png" alt="">
-						<img class="w-6 h-6" src="/tags/github.png" alt="">
-						<img class="w-6 h-6" src="/tags/astro.svg" alt="">
-					</picture>
-                </article>
-			</section>
+			<h3 class="text-base my-8">Conoce mi portfolio. Estos son algunos de los proyectos en los que he participado como freelance.</h3>
+			<Porfolio />
 		</main>
 		<Footer />
 	</body>
