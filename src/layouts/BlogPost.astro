@@ -28,43 +28,24 @@ const {
 <html lang="en" class="">
 	<head>
 		<BaseHead title={title} description={description} />
-		<style>
-			.title {
-				font-size: 2em;
-				margin: 0.25em 0 0;
-			}
-			.info {
-				display: flex;
-				align-items: center;
-			}
-			.time {
-				font-size: 12px;
-				color: #777;
-			}
-			hr {
-  				border-top: 1px solid #DDD;
-				margin: 1rem 0;
-			}
-		</style>
 	</head>
 
 	<body class="max-w-4xl">
 		<Header />
 		<main>
-			<article>
+			<article class="mt-10">
 				{heroImage && (
-					<img class="my-8"
-						width={720}
-						height={360}
+					<img
+						class="my-8"
 						src={heroImage}
 						alt={alt}
 					/>
 				)}
-				<h1 class="title">{title}</h1>
-				<div class="info">
+				<h1 class="mt-2">{title}</h1>
+				<div class="flex items-center">
 					<img class="w-6 mr-2" src={tagImage} alt={tagAlt}>
 					{pubDate &&
-						<time class="time">
+						<time class="text-sm text-gray-600">
 							{new Date(pubDate).toLocaleDateString('es', {
 								year: 'numeric',
 								month: 'long',
@@ -74,7 +55,7 @@ const {
 					}
 					{updatedDate && <div>Last updated on <time>{updatedDate}</time></div>}
 				</div>
-				<hr/>
+				<div class="my-2 border-t border-stone-200"></div>
 				<slot />
 			</article>
 			<div>
