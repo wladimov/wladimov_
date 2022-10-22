@@ -14,7 +14,7 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 		<style>
@@ -59,7 +59,7 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 			}
 		</style>
 	</head>
-	<body class="m-auto">
+	<body class="m-auto dark:bg-gray-900">
 		<Header />
 		<main>
 			<h3 class="text-base font-bold my-8">Últimos artículos</h3>
