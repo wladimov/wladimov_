@@ -70,7 +70,7 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 									<time class="info" >{post.frontmatter.pubDate}</time>
 								</div>
 							</a>
-							<p> {post.frontmatter.description} </p>
+							<q>{post.frontmatter.description}</q>
 						}
 					</div>
 				))}

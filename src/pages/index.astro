@@ -14,7 +14,7 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 ---
 
 <!DOCTYPE html>
-<html lang="en" class="">
+<html lang="es-Es" class="">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 		<style>
@@ -62,29 +62,31 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 	<body class="m-auto dark:bg-gray-900">
 		<Header />
 		<main>
-			<h3 class="text-base font-bold my-8">Últimos artículos</h3>
 			<section>
-				{posts.map((post) =>(
-					<div>
-						{!post.frontmatter.draft &&
-							<a class="content-post" href={post.url}>
-								<picture>
-									<img src={post.frontmatter.tagImage} alt={post.frontmatter.alt} />
-								</picture>
-								<div>
-									<h2 class="title-post">{post.frontmatter.title}</h2>
-									<time class="info" datetime={post.frontmatter.pubDate}>
-										{new Date(post.frontmatter.pubDate).toLocaleDateString('es', {
-											year: 'numeric',
-											month: 'long',
-											day: 'numeric',
-										})}
-									</time>
-								</div>
-							</a>
-						}
-					</div>
-				))}
+				<h3 class="text-base font-bold my-8">Últimos artículos</h3>
+				<ul>
+					{posts.map((post) =>(
+						<li>
+							{!post.frontmatter.draft &&
+								<a class="content-post" href={post.url}>
+									<picture>
+										<img src={post.frontmatter.tagImage} alt={post.frontmatter.alt} />
+									</picture>
+									<div>
+										<h2 class="title-post">{post.frontmatter.title}</h2>
+										<time class="info" datetime={post.frontmatter.pubDate}>
+											{new Date(post.frontmatter.pubDate).toLocaleDateString('es', {
+												year: 'numeric',
+												month: 'long',
+												day: 'numeric',
+											})}
+										</time>
+									</div>
+								</a>
+							}
+						</li>
+					))}
+				</ul>
 			</section>
 		</main>
 		<Footer />
