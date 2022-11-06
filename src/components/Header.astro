@@ -1,11 +1,17 @@
 ---
 import HeaderLink from './HeaderLink.astro';
+import SocialList from './SocialList.astro';
 ---
 
-<header>
-	<a href="/" aria-label="enlace que redirije al inicio ">
-		<img class="w-[144px] h-[25px] " src="/logo.svg" alt="">
-	</a>
+<header class="flex justify-between">
+	<section>
+		<a href="/" aria-label="enlace que redirije al inicio ">
+			<img class="w-[144px] h-[25px] " src="/logo.svg" alt="Wladimir Moya @wladimov logo">
+		</a>
+	</section>
+	<section>
+		<SocialList />
+	</section>
 </header>
 <style>
 	img {
