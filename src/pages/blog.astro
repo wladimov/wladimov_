@@ -58,7 +58,7 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 		<Header />
 		<main>
 			<section>
-				{posts.map((post) =>(
+				{posts.map((post) => (
 					<div>
 						{!post.frontmatter.draft &&
 							<a class="content-post" href={post.url}>
